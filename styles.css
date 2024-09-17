@@ -1,14 +1,12 @@
 :root {
+    --cell-size: 40px;
     --font-size-base: 16px;
-    --cell-size: 3.5rem;
-    --key-size: 2.5rem;
 }
 
 @media (max-width: 480px) {
     :root {
+        --cell-size: 30px;
         --font-size-base: 14px;
-        --cell-size: 2.5rem;
-        --key-size: 2rem;
     }
 }
 
@@ -36,7 +34,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     margin-bottom: 20px;
-    max-width: 500px;
+    max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -80,14 +78,13 @@ body {
     font-size: calc(var(--font-size-base) * 0.875);
     cursor: pointer;
     transition: background-color 0.3s;
-    flex: 1 0 calc(10% - 0.5rem);
-    max-width: var(--key-size);
-    height: var(--key-size);
+    flex: 1 0 8%;
+    max-width: 40px;
 }
 
 .key.enter {
-    flex: 2 0 calc(20% - 0.5rem);
-    max-width: calc(var(--key-size) * 2);
+    flex: 2 0 16%;
+    max-width: 80px;
 }
 
 .key:hover {
@@ -123,7 +120,7 @@ body {
 }
 
 #envelope {
-    font-size: 6rem;
+    font-size: 100px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
@@ -136,7 +133,7 @@ body {
     display: none;
     background-color: white;
     border-radius: 10px;
-    padding: 1.5rem;
+    padding: 20px;
     width: 90%;
     max-width: 400px;
     position: relative;
@@ -150,19 +147,8 @@ body {
     transform: scale(1);
 }
 
-#letter h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-#letter p {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
 .corner-heart {
-    font-size: 1.5rem;
+    font-size: 24px;
     position: absolute;
     animation: pulse 1s infinite;
     display: none;
@@ -192,14 +178,5 @@ body {
 
     .corner-heart {
         font-size: 20px;
-    }
-}
-
-@media (max-width: 360px) {
-    .key {
-        flex: 1 0 calc(20% - 0.5rem);
-    }
-    .key.enter {
-        flex: 2 0 calc(40% - 0.5rem);
     }
 }
