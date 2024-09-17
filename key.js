@@ -28,6 +28,12 @@ const word = "TEAMO";
             keyboard.appendChild(key);
         });
 
+        const enterKey = document.createElement('button');
+        enterKey.textContent = 'aber';
+        enterKey.classList.add('key', 'enter');
+        enterKey.addEventListener('click', checkGuess);
+        keyboard.appendChild(enterKey);
+
         function handleInput(letter) {
             if (currentGuess.length < word.length) {
                 currentGuess.push(letter);
