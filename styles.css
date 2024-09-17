@@ -82,6 +82,11 @@ body {
     max-width: 40px;
 }
 
+.key.enter {
+    flex: 2 0 16%;
+    max-width: 80px;
+}
+
 .key:hover {
     background-color: #ff69b4;
 }
